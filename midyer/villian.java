@@ -12,6 +12,7 @@ public class villian extends Actor
      * Act - do whatever the villian wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    MyWorld world = (MyWorld) getWorld();
     public void act()
     {
         // Add your action code here.
