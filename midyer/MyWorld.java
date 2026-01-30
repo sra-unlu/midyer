@@ -20,7 +20,8 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
-        addObject(p, 40, 200); 
+        addObject(p, 40, 300); 
+        addObject(new darkness(), 40, 300);
     }
     
     public void nextWorld(){

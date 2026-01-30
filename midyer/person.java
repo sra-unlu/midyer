@@ -13,11 +13,12 @@ public class person extends Actor
      * Act - do whatever the person wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    MyWorld world = (MyWorld) getWorld();
+    public MyWorld world = (MyWorld) getWorld();
     public void act()
     {
         move();
         if(isAtEdge()){
+            System.out.println("alo");
             world.nextWorld();
         }
     }
@@ -31,7 +32,11 @@ public class person extends Actor
             setLocation(px, py - 5);
         }if (Greenfoot.isKeyDown("down")){
             setLocation(px, py + 5);
-        } world.updatepx(getX());
+        }
+        System.out.println("alo");
+        world.updatepx(getX());
+        System.out.println("alo");
         world.updatepy(getY());
+        System.out.println("alo");
     }
 }

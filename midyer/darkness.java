@@ -12,7 +12,7 @@ public class darkness extends Actor
      * Act - do whatever the darkness wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    MyWorld world = (MyWorld) getWorld();
+    public MyWorld world = (MyWorld) getWorld();
     public void act()
     {
         setLocation(world.getpx(), world.getpy());
