@@ -20,8 +20,11 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
+        System.out.println("start");
         addObject(p, 40, 300); 
         addObject(new darkness(), 40, 300);
+        playerx = getpx();
+        playery = getpy();
     }
     
     public void nextWorld(){
@@ -35,10 +38,5 @@ public class MyWorld extends World
     public int getpy(){
         return playery;
     }
-    
-    public void updatepx(int x){
-        playerx = x;
-    }public void updatepy(int y){
-        playery = y;
-    }
+
 }
