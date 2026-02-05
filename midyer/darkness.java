@@ -14,13 +14,22 @@ public class darkness extends Actor
      */
     public void act()
     {
+        move();
+    }
+    
+    private void move(){
+        int px = getX();
+        int py = getY();
         MyWorld world = (MyWorld) getWorld();
-        System.out.println("alo");
-        int x = world.getpx();
-        System.out.println("alo");
-        int y = world.getpy();
-        System.out.println("alo");
-        setLocation(x, y);
+        if (Greenfoot.isKeyDown("right")){
+            setLocation(px + 5, py);
+        }if (Greenfoot.isKeyDown("left")){
+            setLocation(px - 5, py);
+        }if (Greenfoot.isKeyDown("up")){
+            setLocation(px, py - 5);
+        }if (Greenfoot.isKeyDown("down")){
+            setLocation(px, py + 5);
+        }
     }
     
     

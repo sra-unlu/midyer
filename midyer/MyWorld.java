@@ -13,30 +13,34 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    person p = new person();
-    public int playerx = 40;
-    public int playery = 300;
-    public MyWorld()
-    {    
+    player p = new player();
+    private GreenfootImage[] worldsArr = new GreenfootImage[10];
+    private int world = 0;
+    villian v1 = new villian(1);
+    villian v2 = new villian(2);
+    public MyWorld(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
-        System.out.println("start");
+        // System.out.println("start");
         addObject(p, 40, 300); 
         addObject(new darkness(), 40, 300);
-        playerx = getpx();
-        playery = getpy();
     }
     
     public void nextWorld(){
-        
-    }
-    
-    public int getpx(){
-        return playerx;
-    }
-    
-    public int getpy(){
-        return playery;
+        world++;
+        // setImage(worldsArr[world]);
+        if(world == v1.worldToAppearIn){
+            addObject(v1, 9900, 300);
+            p.isVillian = true;
+        } else{
+            removeObject(v1);
+        }
+        if(world == v2.worldToAppearIn){
+            addObject(v2, 9900, 300);
+            p.isVillian = true;
+        }  else{
+            removeObject(v2);
+        }
     }
 
 }
