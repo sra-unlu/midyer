@@ -14,6 +14,7 @@ public class spells extends Actor
     */
    
    /**
+    GreenfootImage small = ;
     GreenfootImage 1 = ;
     GreenfootImage 2 = ;
     GreenfootImage 3 = ;

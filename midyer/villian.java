@@ -14,8 +14,8 @@ public class villian extends Actor
      */
     public int worldToAppearIn;
     public int villianIAm;
-    public villian(int who){
-        worldToAppearIn = Greenfoot.getRandomNumber(9);
+    public villian(int who, int world){
+        worldToAppearIn = world;
         villianIAm = who;
     }
     

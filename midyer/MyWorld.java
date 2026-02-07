@@ -13,11 +13,13 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    player p = new player();
+    public player p = new player();
     private GreenfootImage[] worldsArr = new GreenfootImage[10];
-    private int world = 0;
-    villian v1 = new villian(1);
-    villian v2 = new villian(2);
+    public int world = 0;
+    villian v1 = new villian(1, 2);
+    villian v2 = new villian(2, 5);
+    public int wtai1 = v1.worldToAppearIn;
+    public int wtai2 = v2.worldToAppearIn;
     public MyWorld(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
@@ -30,17 +32,18 @@ public class MyWorld extends World
         world++;
         // setImage(worldsArr[world]);
         if(world == v1.worldToAppearIn){
-            addObject(v1, 9900, 300);
+            addObject(v1, 900, 300);
             p.isVillian = true;
-        } else{
+        } else if (world - 1 == v1.worldToAppearIn){
             removeObject(v1);
         }
         if(world == v2.worldToAppearIn){
-            addObject(v2, 9900, 300);
+            addObject(v2, 900, 300);
             p.isVillian = true;
-        }  else{
+        }  else if (world - 1 == v1.worldToAppearIn){
             removeObject(v2);
         }
     }
+    
 
 }

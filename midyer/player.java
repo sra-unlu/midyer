@@ -46,7 +46,7 @@ public class player extends Actor
         if(isVillian){
             fight();
         }
-        if(getX() > 9959){
+        if(getX() > 959){
             // once we fight the villian, set isVillian to false and remove from here
             isVillian = false;
             MyWorld world = (MyWorld) getWorld();
