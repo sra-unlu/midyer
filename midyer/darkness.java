@@ -51,7 +51,7 @@ public class darkness extends Actor
             }
         }
         if(getX() > 959){
-            myWorld.nextWorld();
+            darkness.scale(2000,1200);
             setLocation(40, 300);
         }
     }
