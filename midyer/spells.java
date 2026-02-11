@@ -21,7 +21,7 @@ public class spells extends Actor
        isAquired = false; 
        if(which == 1){
             name = "pencilAttack";
-            damage = 100;
+            damage = 50;
             npcAttachedTo = myworld.hannah;
         } else if(which == 2){
             name = "bcaWifi";
