@@ -12,10 +12,10 @@ public class villian extends Actor
      * Act - do whatever the villian wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage reyyanVIL;
-    GreenfootImage dharmaVIL;
-    GreenfootImage thomasVIL;
-    GreenfootImage zoharVIL;
+    GreenfootImage reyyanVIL = new GreenfootImage("ppl3.png");
+    GreenfootImage dharmaVIL = new GreenfootImage("ppl3.png");
+    GreenfootImage thomasVIL = new GreenfootImage("ppl3.png");
+    GreenfootImage zoharVIL = new GreenfootImage("ppl3.png");
     public int worldToAppearIn;
     public String name;
     public villian(int who){

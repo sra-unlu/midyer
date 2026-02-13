@@ -22,6 +22,7 @@ public class player extends Actor
     private int walkCounter = 50;
     public boolean isVillian = false;
     public String[] spells = new String[6];
+    public int health = 100;
     
     public player() {
         //walk frames

@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ nextWorld()
 comment3.params=self
 comment3.target=void\ getSpellAccordingToNPC(int)
-numComments=4
+comment4.params=
+comment4.target=int\ health()
+numComments=5

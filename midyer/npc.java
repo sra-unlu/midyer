@@ -12,12 +12,12 @@ public class npc extends Actor
      * Act - do whatever the npc wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage hannahNPCImg;
-    GreenfootImage nanamiNPCImg;
-    GreenfootImage migsNPCImg;
-    GreenfootImage pranavNPCImg;
-    GreenfootImage migtNPCImg;
-    GreenfootImage andrewgNPCImg;
+    GreenfootImage hannahNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage nanamiNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage migsNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage pranavNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage migtNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage andrewgNPCImg = new GreenfootImage("ppl3.png");
     public String name;
     public int world;
     public npc(int which){

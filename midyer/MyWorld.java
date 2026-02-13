@@ -40,7 +40,8 @@ public class MyWorld extends World
         // System.out.println("start");
         addObject(p, 40, 300); 
         addObject(new darkness(), 40, 300);
-        setPaintOrder(spells.class, textBox.class, darkness.class, player.class,villian.class, npc.class);
+        addObject(new health(), 40, 300);
+        setPaintOrder(spells.class, textBox.class, darkness.class, healthBarBorder.class, health.class, player.class, villian.class, npc.class);
     }
     
     public void nextWorld(){
@@ -74,6 +75,10 @@ public class MyWorld extends World
         }else if (self == 6){
              addObject(polymorphisimUnit, 40, 710);
         }
+    }
+    
+    public int health(){
+        return p.health;
     }
     
     /*

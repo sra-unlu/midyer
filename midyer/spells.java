@@ -22,27 +22,27 @@ public class spells extends Actor
        if(which == 1){
             name = "pencilAttack";
             damage = 50;
-            npcAttachedTo = myworld.hannah;
+            // npcAttachedTo = myworld.hannah;
         } else if(which == 2){
             name = "bcaWifi";
             damage = 100;
-            npcAttachedTo = myworld.nanami;
+            // npcAttachedTo = myworld.nanami;
         } else if(which == 3){
             name = "chemTest";
             damage = 100;
-            npcAttachedTo = myworld.migs;
+            // npcAttachedTo = myworld.migs;
         } else if(which == 4){
             name = "cleaningUpUpUp";
             damage = 100;
-            npcAttachedTo = myworld.pranav;
+            // npcAttachedTo = myworld.pranav;
         } else if(which == 5){
             name = "showerAttack";
             damage = 100;
-            npcAttachedTo = myworld.migt;
+            // npcAttachedTo = myworld.migt;
         } else if(which == 6){
             name = "polymorphisimUnit";
             damage = 100;
-            npcAttachedTo = myworld.andrewg;
+            // npcAttachedTo = myworld.andrewg;
         }
     }
     public void act()
