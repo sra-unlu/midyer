@@ -19,10 +19,13 @@ public class player extends Actor
     private GreenfootImage frontOne;
     private GreenfootImage frontTwo;
     private GreenfootImage idle;
+    private GreenfootImage scared;
     private int walkCounter = 50;
     public boolean isVillian = false;
     public String[] spells = new String[6];
     public int health = 100;
+    private int actCycle = 0;
+    private int actCycleScared = 0;
     
     public player() {
         //walk frames
@@ -43,13 +46,23 @@ public class player extends Actor
     
     public void act()
     {
+        actCycle++;
         move();
+        if(isVillian){
+            if(actCycleScared == 0){
+                setImage(scared);
+                actCycleScared = actCycle;
+            } else if (actCycleScared == actCycle - 75){
+                setImage(idle);
+        }
+        }
         if(isVillian){
             fight();
         }
         if(getX() > 959){
             // once we fight the villian, set isVillian to false and remove from here
             isVillian = false;
+            actCycleScared = 0;
             MyWorld world = (MyWorld) getWorld();
             world.nextWorld();
             setLocation(40, 300);
