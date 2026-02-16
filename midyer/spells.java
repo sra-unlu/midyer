@@ -15,34 +15,34 @@ public class spells extends Actor
    public String name;
    public int damage;
    public boolean isAquired;
-   public npc npcAttachedTo;
+   public int npcAttachedTo;
    public spells(int which){
        MyWorld myworld = (MyWorld)getWorld();
        isAquired = false; 
        if(which == 1){
             name = "pencilAttack";
             damage = 50;
-            // npcAttachedTo = myworld.hannah;
+            npcAttachedTo = 1;
         } else if(which == 2){
             name = "bcaWifi";
             damage = 100;
-            // npcAttachedTo = myworld.nanami;
+            npcAttachedTo = 2;
         } else if(which == 3){
             name = "chemTest";
             damage = 100;
-            // npcAttachedTo = myworld.migs;
+            npcAttachedTo = 3;
         } else if(which == 4){
             name = "cleaningUpUpUp";
             damage = 100;
-            // npcAttachedTo = myworld.pranav;
+            npcAttachedTo = 4;
         } else if(which == 5){
             name = "showerAttack";
             damage = 100;
-            // npcAttachedTo = myworld.migt;
+            npcAttachedTo = 5;
         } else if(which == 6){
             name = "polymorphisimUnit";
             damage = 100;
-            // npcAttachedTo = myworld.andrewg;
+            npcAttachedTo = 6;
         }
     }
     public void act()

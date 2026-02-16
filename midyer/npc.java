@@ -18,32 +18,33 @@ public class npc extends Actor
     GreenfootImage pranavNPCImg = new GreenfootImage("ppl3.png");
     GreenfootImage migtNPCImg = new GreenfootImage("ppl3.png");
     GreenfootImage andrewgNPCImg = new GreenfootImage("ppl3.png");
-    public String name;
+    public int name;
     public int world;
+
     public npc(int which){
         if(which == 1){
             setImage(hannahNPCImg);
-            name = "hannah";
+            name = 1;
             world = 1;
         } else if(which == 2){
             setImage(nanamiNPCImg);
-            name = "nanami";
+            name = 2;
             world = 2;
         } else if(which == 3){
             setImage(migsNPCImg);
-            name = "migs";
+            name = 3;
             world = 3;
         } else if(which == 4){
             setImage(pranavNPCImg);
-            name = "pranav";
+            name = 4;
             world = 4;
         } else if(which == 5){
             setImage(migtNPCImg);
-            name = "migt";
+            name = 5;
             world = 5;
         } else if(which == 6){
             setImage(andrewgNPCImg);
-            name = "andrewg";
+            name = 6;
             world = 6;
         }
     }
@@ -53,6 +54,9 @@ public class npc extends Actor
     }
     
     public void giveSpell(){
-        
+        if(isTouching(player.class)){
+            MyWorld myWorld = (MyWorld)getWorld();
+            myWorld.getSpellAccordingToNPC(name);
+        }
     }
 }

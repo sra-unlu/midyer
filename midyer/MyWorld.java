@@ -58,28 +58,65 @@ public class MyWorld extends World
             p.isVillian = true;
         }  else if (world - 1 == dharma.worldToAppearIn){
             removeObject(dharma);
+        }if(world == hannah.world){
+            addObject(hannah, 900, 300);
+            
+        }  else if (world - 1 == hannah.world){
+            removeObject(hannah);
+        }if(world == nanami.world){
+            addObject(nanami, 900, 300);
+            
+        }  else if (world - 1 == nanami.world){
+            removeObject(nanami);
+        }if(world == migs.world){
+            addObject(migs, 900, 300);
+            
+        }  else if (world - 1 == migs.world){
+            removeObject(migs);
+        }if(world == pranav.world){
+            addObject(pranav, 900, 300);
+            
+        }  else if (world - 1 == pranav.world){
+            removeObject(pranav);
+        }if(world == migt.world){
+            addObject(migt, 900, 300);
+            
+        }  else if (world - 1 == migt.world){
+            removeObject(migt);
+        }if(world == andrewg.world){
+            addObject(andrewg, 900, 300);
+            
+        }  else if (world - 1 == andrewg.world){
+            removeObject(andrewg);
         }
     }
     
     public void getSpellAccordingToNPC(int self){
         if(self == 1){
-            addObject(pencilAttack, 40, 960);
+            addObject(pencilAttack, 500, 300);
+            addObject(new textBox(), 500, 75);
         } else if(self == 2){
-            addObject(bcaWifi, 40, 910);
+            addObject(bcaWifi, 500, 300);
+            addObject(new textBox(), 500, 75);
         } else if(self == 3){
-             addObject(chemHw, 40, 860);
+             addObject(chemHw, 500, 300);
+             addObject(new textBox(), 500, 75);
         } else if(self == 4){
-             addObject(cleaningUpUpUp, 40, 810);
+             addObject(cleaningUpUpUp, 500, 300);
+             addObject(new textBox(), 500, 75);
         } else if(self == 5){
-            addObject(showerAttack, 40, 760);
+            addObject(showerAttack, 500, 300);
+            addObject(new textBox(), 500, 75);
         }else if (self == 6){
-             addObject(polymorphisimUnit, 40, 710);
+             addObject(polymorphisimUnit, 500, 300);
+             addObject(new textBox(), 500, 75);
         }
     }
     
     public int health(){
         return p.health;
     }
+    
     
     /*
      * Code for high score font change and drawing from block blast
