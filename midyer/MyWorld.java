@@ -22,18 +22,25 @@ public class MyWorld extends World
     public int worldsForHallways = 0;
     private int totalWorlds = 5;
     private boolean worldChanging = false;
+    public int lastAttacked = 2;
     
     public npc hannah = new npc(1);
+    public pencilAttack pencilAttack = new pencilAttack();
 
     public npc nanami = new npc(2);
+    public bcaWifi bcaWifi = new bcaWifi();
 
     public npc migs = new npc(3);
+    public chemTest chemTest = new chemTest();
 
     public npc pranav = new npc(4);
+    public cleaningUpUpUp cleaningUpUpUp = new cleaningUpUpUp();
 
     public npc migt = new npc(5);
+    public showerAttack showerAttack = new showerAttack();
 
     public npc andrewg = new npc(6);
+    public polymorphisimUnit polymorphisimUnit = new polymorphisimUnit();
 
     public villian reyyan = new villian(1);
     public villian dharma = new villian(2);
@@ -191,7 +198,7 @@ public class MyWorld extends World
             addObject(nanamiText, 500, 525);
             nanami.setSpeak();
         } else if(self == 3){
-             addObject(chemHw, 460, 860);
+             addObject(chemTest, 460, 860);
              addObject(migsText, 500, 525);
              migs.setSpeak();
         } else if(self == 4){
@@ -402,5 +409,34 @@ public class MyWorld extends World
             addObject(computer, 800, 300);
         }
     }
-
+    
+    public int vilHealth(){
+        if(world == wtai1){
+            return reyyan.health;
+        }return dharma.health;
+    }
+    
+    public int doubleVilHealth(boolean it){
+        if(it){
+            return thomas.health;
+        } return zohar.health;
+    }
+    
+    public void changeVHealth(int damage){
+        if(world == wtai1){
+            reyyan.health += damage;
+        } else if(world == wtai2){
+            dharma.health += damage;
+        }
+    }
+    
+    public void changeDoubleVHealth(int damage){
+        if(lastAttacked == 2){
+            lastAttacked--;
+            zohar.health += damage;
+        }else{
+            lastAttacked++;
+            thomas.health += damage;
+        }
+    }
 }

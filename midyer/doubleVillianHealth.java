@@ -10,11 +10,14 @@ public class doubleVillianHealth extends Actor
 
     private int previousHealth = 100;
     private int nowHealth = 100;
+    
+    public boolean isThomas;
 
-    public doubleVillianHealth(){
+    public doubleVillianHealth(boolean it){
         img.setColor(green);
         img.fillRect(0, 0, 100, 10);
         setImage(img);
+        isThomas = it;
     }
 
     public void act()
@@ -45,6 +48,7 @@ public class doubleVillianHealth extends Actor
 
     private int getHealth(){
         MyWorld world = (MyWorld)getWorld();
-        return world.doubleVilHealth();
+        return world.doubleVilHealth(isThomas);
     }
+    
 }

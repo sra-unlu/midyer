@@ -17,6 +17,9 @@ public class showers extends Actor
         if(!isTouching(villian.class)){
             setLocation(getX() + 5, getY());
             MyWorld mw = (MyWorld)getWorld();
+            if(mw.world > 8){
+                mw.changeDoubleVHealth(-50);
+            }
             mw.changeVHealth(-50);
         } else{
             MyWorld mw = (MyWorld)getWorld();
