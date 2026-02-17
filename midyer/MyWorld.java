@@ -65,6 +65,10 @@ public class MyWorld extends World
     public zoharName zoharName = new zoharName();
     public villianHealth vh = new villianHealth();
     public villianHealthBarBorder vb = new villianHealthBarBorder();
+    public doubleVillianHealth vdh1 = new doubleVillianHealth(true);
+    public doubleVillianHealth vdh2 = new doubleVillianHealth(false);
+    public villianHealthBarBorder vb1 = new villianHealthBarBorder();
+    public villianHealthBarBorder vb2 = new villianHealthBarBorder();
     
     public sparkle sparkle;
     public fire fire;
@@ -253,21 +257,31 @@ public class MyWorld extends World
             addObject(textbox, 500, 525);
             if(whichWorld == 4){
                 removeObject(nanami);
+                addObject(reyyanName, 900, 380);
                 addObject(reyyanText, 500, 525);
             }else{
                 removeObject(pranav);
                 addObject(dharmaText, 500, 525);
+                addObject(dharmaName, 900, 380);
             }villian who = (villian)whoIAmAdding(whichWorld);
             addObject(who, 900, 300);
             addObject(vh, 900, 220);
+            addObject(vb, 900, 220);
             p.isVillian = true;
             
         }else if(whichWorld == 10){
+            addObject(textbox, 500, 525);
             removeObject(andrewg);
             addObject(thomas, 900, 200);
+            addObject(thomasName, 900, 280);
             addObject(zohar, 900, 400);
+            addObject(zoharName, 900, 480);
             p.isVillian = true;
             addObject(thomasZoharText, 500, 525);
+            addObject(vdh1, 900, 120);
+            addObject(vdh2, 900, 320);
+            addObject(vb1, 900, 120);
+            addObject(vb2, 900, 320);
         }
     }
     
