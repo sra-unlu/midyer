@@ -1,14 +1,13 @@
 #BlueJ class context
 comment0.target=health
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ health\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=health()
+comment1.params=playerRef
+comment1.target=health(player)
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ draw()
+comment3.target=void\ followPlayer()
 comment4.params=
-comment4.target=int\ getHealth()
+comment4.target=void\ draw()
 comment5.params=
-comment5.target=void\ move()
+comment5.target=int\ getHealth()
 numComments=6

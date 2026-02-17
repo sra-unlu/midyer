@@ -12,22 +12,27 @@ public class healthBarBorder extends Actor
      * Act - do whatever the healthBarBorder wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        move();
+    private player p;
+    
+    private GreenfootImage b;
+
+    public healthBarBorder(player playerRef){
+        p = playerRef;
+
+        b = getImage();
+        b.scale(110, 20);
+        setImage(b);
     }
-    private void move(){
-        int px = getX();
-        int py = getY();
-        MyWorld world = (MyWorld) getWorld();
-        if (Greenfoot.isKeyDown("right")){
-            setLocation(px + 5, py);
-        }else if (Greenfoot.isKeyDown("left")){
-            setLocation(px - 5, py);
-        }else if (Greenfoot.isKeyDown("up")){
-            setLocation(px, py - 5);
-        }else if (Greenfoot.isKeyDown("down")){
-            setLocation(px, py + 5);
+
+    public void act() {
+        followPlayer();
+    }
+
+    private void followPlayer(){
+        if (p != null) {
+            setLocation(p.getX(), p.getY() - 70);
         }
     }
+    
+    
 }

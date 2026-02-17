@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (worldToAppearIn, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class npc here.
@@ -19,44 +19,58 @@ public class npc extends Actor
     GreenfootImage migtNPCImg = new GreenfootImage("ppl3.png");
     GreenfootImage andrewgNPCImg = new GreenfootImage("ppl3.png");
     public int name;
-    public int world;
+    public int worldToAppearIn;
+    public int actCycle;
+    public int speak = -2;
+    public boolean spellGiven = false;
 
     public npc(int which){
+        actCycle = 0;
         if(which == 1){
             setImage(hannahNPCImg);
             name = 1;
-            world = 1;
+            worldToAppearIn = 2;
         } else if(which == 2){
             setImage(nanamiNPCImg);
             name = 2;
-            world = 2;
+            worldToAppearIn = 3;
         } else if(which == 3){
             setImage(migsNPCImg);
             name = 3;
-            world = 3;
+            worldToAppearIn = 5;
         } else if(which == 4){
             setImage(pranavNPCImg);
             name = 4;
-            world = 4;
+            worldToAppearIn = 6;
         } else if(which == 5){
             setImage(migtNPCImg);
             name = 5;
-            world = 5;
+            worldToAppearIn = 8;
         } else if(which == 6){
             setImage(andrewgNPCImg);
             name = 6;
-            world = 6;
+            worldToAppearIn = 9;
         }
     }
     public void act()
     {
-        // Add your action code here.
+        actCycle++;
+        giveSpell();
     }
     
     public void giveSpell(){
-        if(isTouching(player.class)){
-            MyWorld myWorld = (MyWorld)getWorld();
-            myWorld.getSpellAccordingToNPC(name);
+        if(isTouching(player.class) && spellGiven == false){
+            MyWorld myworld = (MyWorld)getWorld();
+            myworld.getSpellAccordingToNPC(name);
+            spellGiven = true;
+            return;
+        } else if(spellGiven && actCycle - 75 == speak){
+            MyWorld myworld = (MyWorld)getWorld();
+            myworld.removeText(name);
         }
+    }
+    
+    public void setSpeak(){
+        speak = actCycle;
     }
 }

@@ -12,5 +12,5 @@ comment4.target=void\ backWalk()
 comment5.params=
 comment5.target=void\ frontWalk()
 comment6.params=
-comment6.target=void\ fight()
+comment6.target=void\ attack()
 numComments=7

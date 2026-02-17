@@ -54,11 +54,9 @@ public class player extends Actor
                 actCycleScared = actCycle;
             } else if (actCycleScared == actCycle - 75){
                 setImage(idle);
+            }
         }
-        }
-        if(isVillian){
-            fight();
-        }
+        
         if(getX() > 959){
             // once we fight the villian, set isVillian to false and remove from here
             isVillian = false;
@@ -116,8 +114,21 @@ public class player extends Actor
         }
     }
     
-    private void fight(){
-        
+    public void attack(){
+        MyWorld mw = (MyWorld)getWorld();
+        if(Greenfoot.isKeyDown("1")){
+            mw.addMe(1);
+        }else if(Greenfoot.isKeyDown("2")){
+            mw.addMe(2);
+        }else if(Greenfoot.isKeyDown("3")){
+            mw.addMe(3);
+        }else if(Greenfoot.isKeyDown("4")){
+            mw.addMe(4);
+        }else if(Greenfoot.isKeyDown("5")){
+            mw.addMe(5);
+        }else if(Greenfoot.isKeyDown("6")){
+            mw.addMe(6);
+        }
     }
 }
 
