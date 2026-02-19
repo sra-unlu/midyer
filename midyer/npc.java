@@ -12,10 +12,10 @@ public class npc extends Actor
      * Act - do whatever the npc wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage hannahNPCImg = new GreenfootImage("ppl3.png");
-    GreenfootImage nanamiNPCImg = new GreenfootImage("ppl3.png");
-    GreenfootImage migsNPCImg = new GreenfootImage("ppl3.png");
-    GreenfootImage pranavNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage hannahNPCImg = new GreenfootImage("Hannah.png");
+    GreenfootImage nanamiNPCImg = new GreenfootImage("nanami.png");
+    GreenfootImage migsNPCImg = new GreenfootImage("migs.png");
+    GreenfootImage pranavNPCImg = new GreenfootImage("pranav.png");
     GreenfootImage migtNPCImg = new GreenfootImage("ppl3.png");
     GreenfootImage andrewgNPCImg = new GreenfootImage("ppl3.png");
     public int name;
@@ -27,26 +27,32 @@ public class npc extends Actor
     public npc(int which){
         actCycle = 0;
         if(which == 1){
+            hannahNPCImg.scale(150, 140);
             setImage(hannahNPCImg);
             name = 1;
             worldToAppearIn = 2;
         } else if(which == 2){
+            nanamiNPCImg.scale(150, 140);
             setImage(nanamiNPCImg);
             name = 2;
             worldToAppearIn = 3;
         } else if(which == 3){
+            migsNPCImg.scale(150, 140);
             setImage(migsNPCImg);
             name = 3;
             worldToAppearIn = 5;
         } else if(which == 4){
+            pranavNPCImg.scale(150, 140);
             setImage(pranavNPCImg);
             name = 4;
             worldToAppearIn = 6;
         } else if(which == 5){
+            migtNPCImg.scale(150, 140);
             setImage(migtNPCImg);
             name = 5;
             worldToAppearIn = 8;
         } else if(which == 6){
+            andrewgNPCImg.scale(150, 140);
             setImage(andrewgNPCImg);
             name = 6;
             worldToAppearIn = 9;
@@ -64,7 +70,7 @@ public class npc extends Actor
             myworld.getSpellAccordingToNPC(name);
             spellGiven = true;
             return;
-        } else if(spellGiven && actCycle - 75 == speak){
+        } else if(spellGiven && actCycle - 300 == speak){
             MyWorld myworld = (MyWorld)getWorld();
             myworld.removeText(name);
         }

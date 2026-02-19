@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class andrewgText extends Actor
+public class andrewgText extends texts
 {
     /**
      * Act - do whatever the andrewgText wants to do. This method is called whenever

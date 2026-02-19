@@ -6,14 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class chemTest extends Actor
+public class chemTest extends spells
 {
     /**
      * Act - do whatever the chemTest wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        // Add your action code here.
+    public chemTest(){
+        GreenfootImage chemTest = new GreenfootImage("chemTest.png");
+        chemTest.scale(72, 90);
+        setImage(chemTest);
     }
 }

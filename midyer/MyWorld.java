@@ -19,8 +19,7 @@ public class MyWorld extends World
     
     private GreenfootImage[] worldsArr = new GreenfootImage[10];
     public int world = 0;
-    public int worldsForHallways = 0;
-    private int totalWorlds = 5;
+    
     private boolean worldChanging = false;
     public int lastAttacked = 2;
     
@@ -119,11 +118,15 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 600, 1);
         
-        worldsArr[1] = new GreenfootImage("hallway1.png");
-        worldsArr[2] = new GreenfootImage("hallway2.png");
-        worldsArr[3] = new GreenfootImage("hallway3.png");
-        worldsArr[4] = new GreenfootImage("hallway4.png");
-        worldsArr[5] = new GreenfootImage("hallway5.png");
+        worldsArr[0] = new GreenfootImage("hallway1.png");
+        worldsArr[1] = new GreenfootImage("hallway2.png");
+        worldsArr[2] = new GreenfootImage("hallway3.png");
+        worldsArr[3] = new GreenfootImage("hallway4.png");
+        worldsArr[4] = new GreenfootImage("hallway5.png");
+        worldsArr[5] = new GreenfootImage("hallway6.png");
+        worldsArr[6] = new GreenfootImage("hallway7.png");
+        worldsArr[7] = new GreenfootImage("hallway8.png");
+        worldsArr[8] = new GreenfootImage("hallway9.png");
 
 
         
@@ -143,7 +146,7 @@ public class MyWorld extends World
         addObject(new collision(), 500, 555);
         addObject(new collision(), 500, 0);
         
-        setPaintOrder(textBox.class, darkness.class, healthBarBorder.class, health.class, villian.class, player.class, npc.class);
+        setPaintOrder(spells.class, names.class, texts.class, textBox.class, darkness.class, health.class, villianHealth.class, doubleVillianHealth.class, healthBarBorder.class, villianHealthBarBorder.class, attack.class, vilAttack.class, player.class, npc.class, villian.class);
     }
     
     public int health() {
@@ -172,17 +175,10 @@ public class MyWorld extends World
         if(worldChanging){
             return;
         }
-
+        world++;
         worldChanging = true;
 
-        world++;
-        worldsForHallways++;
-
-        if (worldsForHallways >= totalWorlds){
-            worldsForHallways = 0;
-        }
-        
-        setBackground(worldsArr[worldsForHallways]);
+        setBackground(worldsArr[world]);
         npcWorld(world);
         System.out.println("Current background should be: hallway" + (world+1) + ".png");
 
@@ -194,27 +190,27 @@ public class MyWorld extends World
     public void getSpellAccordingToNPC(int self){
         addObject(textbox, 500, 525);
         if(self == 1){
-            addObject(pencilAttack, 324, 960);
+            addObject(pencilAttack, 324, 50);
             addObject(hannahText, 500, 525);
             hannah.setSpeak();
         } else if(self == 2){
-            addObject(bcaWifi, 392, 910);
+            addObject(bcaWifi, 392, 50);
             addObject(nanamiText, 500, 525);
             nanami.setSpeak();
         } else if(self == 3){
-             addObject(chemTest, 460, 860);
+             addObject(chemTest, 460, 50);
              addObject(migsText, 500, 525);
              migs.setSpeak();
         } else if(self == 4){
-             addObject(cleaningUpUpUp, 528, 810);
+             addObject(cleaningUpUpUp, 528, 50);
              addObject(pranavText, 500, 525);
              pranav.setSpeak();
         } else if(self == 5){
-            addObject(showerAttack, 596, 760);
+            addObject(showerAttack, 596, 50);
             addObject(migtText, 500, 525);
             migt.setSpeak();
         }else if (self == 6){
-             addObject(polymorphisimUnit, 664, 710);
+             addObject(polymorphisimUnit, 664, 50);
              addObject(andrewgText, 500, 525);
              andrewg.setSpeak();
         } 

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class fire extends Actor
+public class fire extends vilAttack
 {
     /**
      * Act - do whatever the fire wants to do. This method is called whenever

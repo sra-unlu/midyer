@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class sparkle extends Actor
+public class sparkle extends vilAttack
 {
     /**
      * Act - do whatever the sparkle wants to do. This method is called whenever

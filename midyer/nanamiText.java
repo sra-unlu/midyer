@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class nanamiText extends Actor
+public class nanamiText extends texts
 {
     /**
      * Act - do whatever the nanamiText wants to do. This method is called whenever

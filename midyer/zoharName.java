@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class zoharName extends Actor
+public class zoharName extends names
 {
     /**
      * Act - do whatever the zoharName wants to do. This method is called whenever

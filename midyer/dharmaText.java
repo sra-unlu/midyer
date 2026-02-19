@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class dharmaText extends Actor
+public class dharmaText extends texts
 {
     /**
      * Act - do whatever the dharmaText wants to do. This method is called whenever

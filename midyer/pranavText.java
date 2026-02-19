@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class pranavText extends Actor
+public class pranavText extends texts
 {
     /**
      * Act - do whatever the pranavText wants to do. This method is called whenever

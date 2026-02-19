@@ -22,18 +22,22 @@ public class villian extends Actor
     public boolean isAttacked = false;
     public villian(int who){
         if(who == 1){
+            reyyanVIL.scale(150, 140);
             setImage(reyyanVIL);
             worldToAppearIn = 4;
             name = 1;
         } else if(who == 2){
+            dharmaVIL.scale(150, 140);
             setImage(dharmaVIL);
             worldToAppearIn = 7;
             name = 2;
         } else if(who == 3){
+            thomasVIL.scale(150, 140);
             setImage(thomasVIL);
             name = 3;
             worldToAppearIn = 10;
         } else if(who == 4){
+            zoharVIL.scale(150, 140);
             setImage(zoharVIL);
             name = 3;
             worldToAppearIn = 10;
