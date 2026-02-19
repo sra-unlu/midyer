@@ -12,6 +12,12 @@ public class zoharName extends names
      * Act - do whatever the zoharName wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public zoharName(){
+        GreenfootImage x = getImage();
+        x.scale(340, 58);
+        setImage(x);
+    }
+    
     public void act()
     {
         // Add your action code here.

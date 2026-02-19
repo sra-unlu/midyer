@@ -14,7 +14,7 @@ public class villian extends Actor
      */
     GreenfootImage reyyanVIL = new GreenfootImage("Reyyan.png");
     GreenfootImage dharmaVIL = new GreenfootImage("Dharma.png");
-    GreenfootImage thomasVIL = new GreenfootImage("ppl3.png");
+    GreenfootImage thomasVIL = new GreenfootImage("thomas.png");
     GreenfootImage zoharVIL = new GreenfootImage("ppl3.png");
     public int worldToAppearIn;
     public int name;

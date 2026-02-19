@@ -12,8 +12,9 @@ public class reyyanName extends names
      * Act - do whatever the reyyanName wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act()
-    {
-        // Add your action code here.
+    public reyyanName(){
+        GreenfootImage x = getImage();
+        x.scale(228, 54);
+        setImage(x);
     }
 }

@@ -16,8 +16,8 @@ public class npc extends Actor
     GreenfootImage nanamiNPCImg = new GreenfootImage("nanami.png");
     GreenfootImage migsNPCImg = new GreenfootImage("migs.png");
     GreenfootImage pranavNPCImg = new GreenfootImage("pranav.png");
-    GreenfootImage migtNPCImg = new GreenfootImage("ppl3.png");
-    GreenfootImage andrewgNPCImg = new GreenfootImage("ppl3.png");
+    GreenfootImage migtNPCImg = new GreenfootImage("migt.png");
+    GreenfootImage andrewgNPCImg = new GreenfootImage("andrewg.png");
     public int name;
     public int worldToAppearIn;
     public int actCycle;
