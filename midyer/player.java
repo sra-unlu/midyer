@@ -49,6 +49,7 @@ public class player extends Actor
         actCycle++;
         move();
         if(isVillian){
+            attack();
             if(actCycleScared == 0){
                 setImage(scared);
                 actCycleScared = actCycle;

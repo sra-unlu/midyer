@@ -45,9 +45,9 @@ public class MyWorld extends World
     public villian dharma = new villian(2);
     public villian thomas = new villian(3);
     public villian zohar = new villian(4);
-    public int wtai1 = 4;
-    public int wtai2 = 7;
-    public int wtai3 = 10;
+    public int wtai1 = 3;
+    public int wtai2 = 6;
+    public int wtai3 = 9;
     public textBox textbox = new textBox();
     public andrewgText andrewgText = new andrewgText();
     public dharmaName dharmaName = new dharmaName();
@@ -62,57 +62,59 @@ public class MyWorld extends World
     public thomasZoharText thomasZoharText = new thomasZoharText();
     public thomasName thomasName = new thomasName();
     public zoharName zoharName = new zoharName();
-    public villianHealth vh = new villianHealth();
+    public villianHealth vh1 = new villianHealth(7);
+    public villianHealth vh2 = new villianHealth(8);
     public villianHealthBarBorder vb = new villianHealthBarBorder();
     public doubleVillianHealth vdh1 = new doubleVillianHealth(true);
     public doubleVillianHealth vdh2 = new doubleVillianHealth(false);
     public villianHealthBarBorder vb1 = new villianHealthBarBorder();
     public villianHealthBarBorder vb2 = new villianHealthBarBorder();
     
-    public sparkle sparkle;
-    public fire fire;
-    public computer computer;
-    public pencils pone;
-    public pencils ptwo;
-    public pencils pthree;
-    public pencils pfour;
-    public pencils pfive;
-    public pencils psix;
+    public sparkle sparkle = new sparkle();
+    public fire fire = new fire();
+    public computer computer = new computer();
     
-    public wifis wone;
-    public wifis wtwo;
-    public wifis wthree;
-    public wifis wfour;
-    public wifis wfive;
-    public wifis wsix;
+    public pencils pone = new pencils();
+    public pencils ptwo = new pencils();
+    public pencils pthree = new pencils();
+    public pencils pfour = new pencils();
+    public pencils pfive = new pencils();
+    public pencils psix = new pencils();
     
-    public chemTests ctone;
-    public chemTests cttwo;
-    public chemTests ctthree;
-    public chemTests ctfour;
-    public chemTests ctfive;
-    public chemTests ctsix;
+    public wifis wone = new wifis();
+    public wifis wtwo = new wifis();
+    public wifis wthree = new wifis();
+    public wifis wfour = new wifis();
+    public wifis wfive = new wifis();
+    public wifis wsix = new wifis();
     
-    public cleaningUps cuone;
-    public cleaningUps cutwo;
-    public cleaningUps cuthree;
-    public cleaningUps cufour;
-    public cleaningUps cufive;
-    public cleaningUps cusix;
+    public chemTests ctone = new chemTests();
+    public chemTests cttwo = new chemTests();
+    public chemTests ctthree = new chemTests();
+    public chemTests ctfour = new chemTests();
+    public chemTests ctfive = new chemTests();
+    public chemTests ctsix = new chemTests();
     
-    public showers sone;
-    public showers stwo;
-    public showers sthree;
-    public showers sfour;
-    public showers sfive;
-    public showers ssix;
+    public cleaningUps cuone = new cleaningUps();
+    public cleaningUps cutwo = new cleaningUps();
+    public cleaningUps cuthree = new cleaningUps();
+    public cleaningUps cufour = new cleaningUps();
+    public cleaningUps cufive = new cleaningUps();
+    public cleaningUps cusix = new cleaningUps();
     
-    public units uone;
-    public units utwo;
-    public units uthree;
-    public units ufour;
-    public units ufive;
-    public units usix;
+    public showers sone = new showers();
+    public showers stwo = new showers();
+    public showers sthree = new showers();
+    public showers sfour = new showers();
+    public showers sfive = new showers();
+    public showers ssix = new showers();
+    
+    public units uone = new units();
+    public units utwo = new units();
+    public units uthree = new units();
+    public units ufour = new units();
+    public units ufive = new units();
+    public units usix = new units();
     
     public MyWorld(){    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -191,47 +193,47 @@ public class MyWorld extends World
         addObject(textbox, 500, 525);
         if(self == 1){
             addObject(pencilAttack, 324, 50);
-            addObject(hannahText, 500, 525);
+            addObject(hannahText, 510, 525);
             hannah.setSpeak();
         } else if(self == 2){
-            addObject(bcaWifi, 392, 50);
-            addObject(nanamiText, 500, 525);
+            addObject(bcaWifi, 402, 50);
+            addObject(nanamiText, 510, 535);
             nanami.setSpeak();
         } else if(self == 3){
-             addObject(chemTest, 460, 50);
-             addObject(migsText, 500, 525);
+             addObject(chemTest, 480, 50);
+             addObject(migsText, 510, 525);
              migs.setSpeak();
         } else if(self == 4){
-             addObject(cleaningUpUpUp, 528, 50);
-             addObject(pranavText, 500, 525);
+             addObject(cleaningUpUpUp, 558, 50);
+             addObject(pranavText, 510, 525);
              pranav.setSpeak();
         } else if(self == 5){
-            addObject(showerAttack, 596, 50);
-            addObject(migtText, 500, 525);
+            addObject(showerAttack, 636, 50);
+            addObject(migtText, 510, 525);
             migt.setSpeak();
         }else if (self == 6){
-             addObject(polymorphisimUnit, 664, 50);
-             addObject(andrewgText, 500, 525);
+             addObject(polymorphisimUnit, 714, 50);
+             addObject(andrewgText, 510, 525);
              andrewg.setSpeak();
         } 
     }
     
     public Actor whoIAmAdding(int whichWorld){
-        if(whichWorld == 2){
+        if(whichWorld == 1){
             return hannah;
-        } else if(whichWorld == 3){
+        } else if(whichWorld == 2){
             return nanami;
-        } else if(whichWorld == 4){
+        } else if(whichWorld == 3){
             return reyyan;
-        } else if(whichWorld == 5){
+        } else if(whichWorld == 4){
             return migs;
-        } else if(whichWorld == 6){
+        } else if(whichWorld == 5){
             return pranav;
-        } else if(whichWorld == 7){
+        } else if(whichWorld == 6){
             return dharma;
-        } else if(whichWorld == 8){
+        } else if(whichWorld == 7){
             return migt;
-        } else if(whichWorld == 9){
+        } else if(whichWorld == 8){
             return andrewg;
         } else{
             return thomas;
@@ -239,41 +241,42 @@ public class MyWorld extends World
     }
     
     public void npcWorld(int whichWorld){
-        if(whichWorld == 2 || whichWorld == 3 || whichWorld == 5 || whichWorld == 6 || whichWorld == 8 || whichWorld == 9){
-            if(whichWorld == 3){
+        if(whichWorld == 1 || whichWorld == 2 || whichWorld == 4 || whichWorld == 5 || whichWorld == 7 || whichWorld == 8){
+            if(whichWorld == 2){
                 removeObject(hannah);
-            }else if(whichWorld == 6){
+            }else if(whichWorld == 5){
                 removeObject(migs);
-            }else if(whichWorld == 9){
+            }else if(whichWorld == 8){
                 removeObject(migt);
             }npc who = (npc)whoIAmAdding(whichWorld);
             addObject(who, 915, 110);
             
-        }else if(whichWorld == 4 || whichWorld == 7){
-            addObject(textbox, 500, 525);
-            if(whichWorld == 4){
+        }else if(whichWorld == 3 || whichWorld == 6){
+            addObject(textbox, 500, 515);
+            if(whichWorld == 3){
                 removeObject(nanami);
                 addObject(reyyanName, 900, 380);
-                addObject(reyyanText, 500, 525);
+                addObject(vh1, 970, 230);
+                addObject(reyyanText, 510, 525);
             }else{
                 removeObject(pranav);
-                addObject(dharmaText, 500, 525);
+                addObject(dharmaText, 510, 525);
+                addObject(vh2, 970, 230);
                 addObject(dharmaName, 900, 380);
             }villian who = (villian)whoIAmAdding(whichWorld);
             addObject(who, 900, 300);
-            addObject(vh, 900, 220);
-            addObject(vb, 900, 220);
+            addObject(vb, 895, 225);
             p.isVillian = true;
             
-        }else if(whichWorld == 10){
-            addObject(textbox, 500, 525);
+        }else if(whichWorld == 9){
+            addObject(textbox, 500, 515);
             removeObject(andrewg);
             addObject(thomas, 900, 200);
             addObject(thomasName, 900, 280);
             addObject(zohar, 900, 400);
             addObject(zoharName, 900, 480);
             p.isVillian = true;
-            addObject(thomasZoharText, 500, 525);
+            addObject(thomasZoharText, 510, 525);
             addObject(vdh1, 900, 120);
             addObject(vdh2, 900, 320);
             addObject(vb1, 900, 120);
@@ -295,7 +298,13 @@ public class MyWorld extends World
             removeObject(migtText);
         } else if(whoRU == 6){
             removeObject(andrewgText);
-        }
+        }else if(whoRU == 7){
+            removeObject(reyyanText);
+        }else if(whoRU == 8){
+            removeObject(dharmaText);
+        }else if(whoRU == 9){
+            removeObject(thomasZoharText);
+        } 
     }
     
     public void killMe(int whoRU){
@@ -351,15 +360,23 @@ public class MyWorld extends World
         else{
             if(whoRU == 7){
                 removeObject(reyyan);
-                removeObject(vh);
+                removeObject(reyyanName);
+                removeObject(vh1);
                 removeObject(vb);
             } else if(whoRU == 8){
                 removeObject(dharma);
-                removeObject(vh);
+                removeObject(dharmaName);
+                removeObject(vh2);
                 removeObject(vb);
             } else if(whoRU == 9){
                 removeObject(thomas);
+                removeObject(thomasName);
                 removeObject(zohar);
+                removeObject(zoharName);
+                removeObject(vdh1);
+                removeObject(vdh2);
+                removeObject(vh1);
+                removeObject(vh2);
             }
         }
     }

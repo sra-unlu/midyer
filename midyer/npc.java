@@ -30,32 +30,32 @@ public class npc extends Actor
             hannahNPCImg.scale(150, 140);
             setImage(hannahNPCImg);
             name = 1;
-            worldToAppearIn = 2;
+            worldToAppearIn = 1;
         } else if(which == 2){
             nanamiNPCImg.scale(150, 140);
             setImage(nanamiNPCImg);
             name = 2;
-            worldToAppearIn = 3;
+            worldToAppearIn = 2;
         } else if(which == 3){
             migsNPCImg.scale(150, 140);
             setImage(migsNPCImg);
             name = 3;
-            worldToAppearIn = 5;
+            worldToAppearIn = 4;
         } else if(which == 4){
             pranavNPCImg.scale(150, 140);
             setImage(pranavNPCImg);
             name = 4;
-            worldToAppearIn = 6;
+            worldToAppearIn = 5;
         } else if(which == 5){
             migtNPCImg.scale(150, 140);
             setImage(migtNPCImg);
             name = 5;
-            worldToAppearIn = 8;
+            worldToAppearIn = 7;
         } else if(which == 6){
             andrewgNPCImg.scale(150, 140);
             setImage(andrewgNPCImg);
             name = 6;
-            worldToAppearIn = 9;
+            worldToAppearIn = 8;
         }
     }
     public void act()
@@ -70,7 +70,7 @@ public class npc extends Actor
             myworld.getSpellAccordingToNPC(name);
             spellGiven = true;
             return;
-        } else if(spellGiven && actCycle - 300 == speak){
+        } else if(spellGiven && actCycle - 375 == speak){
             MyWorld myworld = (MyWorld)getWorld();
             myworld.removeText(name);
         }

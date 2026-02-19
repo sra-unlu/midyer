@@ -10,8 +10,10 @@ public class villianHealth extends Actor
 
     private int previousHealth = 100;
     private int nowHealth = 100;
+    public int vil;
 
-    public villianHealth(){
+    public villianHealth(int v){
+        vil = v;
         img.setColor(green);
         img.fillRect(0, 0, 100, 10);
         setImage(img);
@@ -20,6 +22,10 @@ public class villianHealth extends Actor
     public void act()
     {
         nowHealth = getHealth();
+        if(nowHealth <= 0){
+            MyWorld mw = (MyWorld)getWorld();
+            mw.killMe(vil);
+        }
         if(nowHealth != previousHealth){
             draw();
         }

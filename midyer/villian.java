@@ -20,38 +20,54 @@ public class villian extends Actor
     public int name;
     public int health = 100;
     public boolean isAttacked = false;
+    public int speak;
+    public int actCycle = 0; 
     public villian(int who){
         if(who == 1){
             reyyanVIL.scale(150, 140);
             setImage(reyyanVIL);
-            worldToAppearIn = 4;
+            worldToAppearIn = 3;
             name = 1;
         } else if(who == 2){
             dharmaVIL.scale(150, 140);
             setImage(dharmaVIL);
-            worldToAppearIn = 7;
+            worldToAppearIn = 6;
             name = 2;
         } else if(who == 3){
             thomasVIL.scale(150, 140);
             setImage(thomasVIL);
             name = 3;
-            worldToAppearIn = 10;
+            worldToAppearIn = 9;
         } else if(who == 4){
             zoharVIL.scale(150, 140);
             setImage(zoharVIL);
             name = 3;
-            worldToAppearIn = 10;
+            worldToAppearIn = 9;
         }
     }
     
     public void act(){
+        actCycle++;
+        if(actCycle - 375 == speak){
+            MyWorld myworld = (MyWorld)getWorld();
+            myworld.removeText(name + 6);
+        }
         if(isAttacked){
             MyWorld mw = (MyWorld)getWorld();
             mw.attack(name);
+            isAttacked = false;
         } if(health == 0){
             MyWorld mw = (MyWorld)getWorld();
+            mw.killMe(name);
             mw.killMe(name + 6);
         }
     }
     
+    public void setSpeak(){
+        speak = actCycle;
+    }
+    
+    public void attacked(){
+        isAttacked = true;
+    }
 }
