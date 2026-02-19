@@ -260,7 +260,7 @@ public class MyWorld extends World
             }else if(whichWorld == 8){
                 removeObject(migt);
             }npc who = (npc)whoIAmAdding(whichWorld);
-            addObject(who, 915, 110);
+            addObject(who, 650, 125);
             
         }else if(whichWorld == 3 || whichWorld == 6){
             addObject(textbox, 500, 515);
@@ -402,46 +402,46 @@ public class MyWorld extends World
     public void addMe(int whoRU){
         if(whoRU == 1){
             addObject(pone, p.getX(), 220);
-            addObject(ptwo, p.getX(), 252);
+            // addObject(ptwo, p.getX(), 252);
             addObject(pthree, p.getX(), 284);
-            addObject(pfour, p.getX(), 316);
+            // addObject(pfour, p.getX(), 316);
             addObject(pfive, p.getX(), 348);
-            addObject(psix, p.getX(), 380);
+            // addObject(psix, p.getX(), 380);
         } else if(whoRU == 2){
             addObject(wone, p.getX(), 220);
-            addObject(wtwo, p.getX(), 252);
+            // addObject(wtwo, p.getX(), 252);
             addObject(wthree, p.getX(), 284);
-            addObject(wfour, p.getX(), 316);
+            // addObject(wfour, p.getX(), 316);
             addObject(wfive, p.getX(), 348);
-            addObject(wsix, p.getX(), 380);
+            // addObject(wsix, p.getX(), 380);
         } else if(whoRU == 3){
             addObject(ctone, p.getX(), 220);
-            addObject(cttwo, p.getX(), 252);
+            // addObject(cttwo, p.getX(), 252);
             addObject(ctthree, p.getX(), 284);
-            addObject(ctfour, p.getX(), 316);
+            // addObject(ctfour, p.getX(), 316);
             addObject(ctfive, p.getX(), 348);
-            addObject(ctsix, p.getX(), 380);
+            // addObject(ctsix, p.getX(), 380);
         } else if(whoRU == 4){
             addObject(cuone, p.getX(), 220);
-            addObject(cutwo, p.getX(), 252);
+            // addObject(cutwo, p.getX(), 252);
             addObject(cuthree, p.getX(), 284);
-            addObject(cufour, p.getX(), 316);
+            // addObject(cufour, p.getX(), 316);
             addObject(cufive, p.getX(), 348);
-            addObject(cusix, p.getX(), 380);
+            // addObject(cusix, p.getX(), 380);
         } else if(whoRU == 5){
             addObject(sone, p.getX(), 220);
-            addObject(stwo, p.getX(), 252);
+            // addObject(stwo, p.getX(), 252);
             addObject(sthree, p.getX(), 284);
-            addObject(sfour, p.getX(), 316);
+            // addObject(sfour, p.getX(), 316);
             addObject(sfive, p.getX(), 348);
-            addObject(ssix, p.getX(), 380);
+            // addObject(ssix, p.getX(), 380);
         } else if(whoRU == 6){
             addObject(uone, p.getX(), 220);
-            addObject(utwo, p.getX(), 252);
+            // addObject(utwo, p.getX(), 252);
             addObject(uthree, p.getX(), 284);
-            addObject(ufour, p.getX(), 316);
+            // addObject(ufour, p.getX(), 316);
             addObject(ufive, p.getX(), 348);
-            addObject(usix, p.getX(), 380);
+            // addObject(usix, p.getX(), 380);
         }
     }
     
