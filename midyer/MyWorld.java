@@ -129,6 +129,7 @@ public class MyWorld extends World
         worldsArr[6] = new GreenfootImage("hallway7.png");
         worldsArr[7] = new GreenfootImage("hallway8.png");
         worldsArr[8] = new GreenfootImage("hallway9.png");
+        worldsArr[9] = new GreenfootImage("hallway1.png");
 
 
         
@@ -240,6 +241,16 @@ public class MyWorld extends World
         }
     }
     
+    public villian whichVillian(int whichWorld){
+        if(whichWorld == 3){
+            return reyyan;
+        }else if(whichWorld == 6){
+            return dharma;
+        }else{
+            return thomas;
+        }
+    }
+    
     public void npcWorld(int whichWorld){
         if(whichWorld == 1 || whichWorld == 2 || whichWorld == 4 || whichWorld == 5 || whichWorld == 7 || whichWorld == 8){
             if(whichWorld == 2){
@@ -308,6 +319,7 @@ public class MyWorld extends World
     }
     
     public void killMe(int whoRU){
+        villian v = whichVillian(world);
         if(whoRU == 1){
             removeObject(pone);
             removeObject(ptwo);
@@ -315,6 +327,7 @@ public class MyWorld extends World
             removeObject(pfour);
             removeObject(pfive);
             removeObject(psix);
+            v.attacked();
         } else if(whoRU == 2){
             removeObject(wone);
             removeObject(wtwo);
@@ -322,6 +335,7 @@ public class MyWorld extends World
             removeObject(wfour);
             removeObject(wfive);
             removeObject(wsix);
+            v.attacked();
         } else if(whoRU == 3){
             removeObject(ctone);
             removeObject(cttwo);
@@ -329,6 +343,7 @@ public class MyWorld extends World
             removeObject(ctfour);
             removeObject(ctfive);
             removeObject(ctsix);
+            v.attacked();
         } else if(whoRU == 4){
             removeObject(cuone);
             removeObject(cutwo);
@@ -336,6 +351,7 @@ public class MyWorld extends World
             removeObject(cufour);
             removeObject(cufive);
             removeObject(cusix);
+            v.attacked();
         } else if(whoRU == 5){
             removeObject(sone);
             removeObject(stwo);
@@ -343,6 +359,7 @@ public class MyWorld extends World
             removeObject(sfour);
             removeObject(sfive);
             removeObject(ssix);
+            v.attacked();
         } else if(whoRU == 6){
             removeObject(uone);
             removeObject(utwo);
@@ -350,6 +367,7 @@ public class MyWorld extends World
             removeObject(ufour);
             removeObject(ufive);
             removeObject(usix);
+            v.attacked();
         } else if (whoRU == 10){
             removeObject(sparkle);
         } else if (whoRU == 11){

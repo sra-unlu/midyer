@@ -13,7 +13,7 @@ public class villian extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     GreenfootImage reyyanVIL = new GreenfootImage("Reyyan.png");
-    GreenfootImage dharmaVIL = new GreenfootImage("ppl3.png");
+    GreenfootImage dharmaVIL = new GreenfootImage("Dharma.png");
     GreenfootImage thomasVIL = new GreenfootImage("ppl3.png");
     GreenfootImage zoharVIL = new GreenfootImage("ppl3.png");
     public int worldToAppearIn;

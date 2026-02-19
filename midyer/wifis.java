@@ -20,9 +20,9 @@ public class wifis extends attack
         } else{
             MyWorld mw = (MyWorld)getWorld();
             if(mw.world > 8){
-                mw.changeDoubleVHealth(-9);
+                mw.changeDoubleVHealth(-50);
             }
-            mw.changeVHealth(-9);
+            mw.changeVHealth(-50);
             mw.killMe(2);
         }
     }

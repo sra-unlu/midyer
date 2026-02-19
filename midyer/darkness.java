@@ -61,10 +61,9 @@ public class darkness extends Actor
                     villiansAlrDone[0][3] = actCycle;
                 }
             
-        } if(myWorld.world == 6){
+        } else if(myWorld.world == 6){
             int latestFull = latestFull(1);
-            if (actCycle >= 500) {
-                if(latestFull == -1){
+            if(latestFull == -1){
                     darkness.scale(darkness.getWidth() + 1000, darkness.getHeight() + 250);
                     villiansAlrDone[1][0] = actCycle;
                 } else if(latestFull == 0 && actCycle - 15 == villiansAlrDone[1][0]){
@@ -77,11 +76,9 @@ public class darkness extends Actor
                     darkness.scale(darkness.getWidth() + 1000, darkness.getHeight() + 250);
                     villiansAlrDone[1][3] = actCycle;
                 }
-            }
-        } if(myWorld.world == 9){
+        } else if(myWorld.world == 9){
             int latestFull = latestFull(2);
-            if (actCycle >= 500) {
-                if(latestFull == -1){
+            if(latestFull == -1){
                     darkness.scale(darkness.getWidth() + 1000, darkness.getHeight() + 250);
                     villiansAlrDone[2][0] = actCycle;
                 } else if(latestFull == 0 && actCycle - 15 == villiansAlrDone[2][0]){
@@ -94,7 +91,7 @@ public class darkness extends Actor
                     darkness.scale(darkness.getWidth() + 1000, darkness.getHeight() + 250);
                     villiansAlrDone[2][3] = actCycle;
                 }
-            }
+            
         } else {
             if(darkness.getWidth() > 2000 || darkness.getHeight() > 1200){
                 if (actCycle % 15 == 0) {

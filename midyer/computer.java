@@ -16,10 +16,10 @@ public class computer extends vilAttack
     {
         if(!isTouching(player.class)){
             setLocation(getX() - 5, getY());
-            MyWorld mw = (MyWorld)getWorld();
-            mw.changeHealth(-25);
+            
         } else{
             MyWorld mw = (MyWorld)getWorld();
+            mw.changeHealth(-9);
             mw.killMe(12);
         }
     }

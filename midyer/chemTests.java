@@ -16,13 +16,13 @@ public class chemTests extends attack
     {
         if(!isTouching(villian.class)){
             setLocation(getX() + 5, getY());
-            MyWorld mw = (MyWorld)getWorld();
-            if(mw.world > 8){
-                mw.changeDoubleVHealth(-9);
-            }
-            mw.changeVHealth(-9);
+            
         } else{
             MyWorld mw = (MyWorld)getWorld();
+            if(mw.world > 8){
+                mw.changeDoubleVHealth(-50);
+            }
+            mw.changeVHealth(-50);
             mw.killMe(3);
         }
     }
